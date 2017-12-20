@@ -6,8 +6,11 @@
             <div class="date">
                 {{ post.published_date }}
             </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.recipe }}</a></h1>
+            <img style="max-width: 500px; padding: 20px 0px;" src="http://pixelatedcrumb.com/wp-content/uploads/2011/11/sweet-potato-garlicky-kale-pasta_3.jpg">
+            <p>{{ post.ingredients|linebreaksbr }}</p>
+            <p>{{ post.description|linebreaksbr }}</p>
+
         </div>
     {% endfor %}
 {% endblock %}
